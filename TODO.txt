@@ -1,0 +1,30 @@
+LabExam02
+---
+Implementieren Sie die fehlende Klasse(n), fehlende Methoden bzw. fixen Sie Fehler.
+Bauen Sie die Objektstruktur im AllExpressionAndEvaluationTest in der setUp-Methode laut dem Objektdiagramm auf.
+Die Tests, das Klassendiagramm und das Objektdiagramm helfen Ihnen die Implementierung korrekt durchzuführen.
+Gutes Gelingen!
+
+AbgabeName:
+Bitte nennen Sie das Projekt (und das abgegebene ZIP File) so um, dass Sie Ihren Familiennamen und Ihren Vornamen verwenden.
+Bsp.: Wenn Sie Hans DAMPF heißen (Vorname Hans, Nachname DAMPF), dann soll das Abgabefile folgendermaßen heißen:
+ObjectDiagram_Expression_DampfHans.zip
+
+
+---
+Implement the missing Class(es), methods and fix Errors.
+Build up the object structure in the AllExpressionAndEvaluationTest's setUp-method as depicted in the object diagram.
+The tests, the class diagram and the object diagram help you to correctly implement the missing parts.
+Good work!
+
+Submission name:
+Please rename the project (and the zip file) in such a way that your surname and your given name is used.
+ s an example if your given name is John and your family name is STEAM,
+the file should be named: ObjectDiagram_Expression_SteamJohn.zip
+
+Have a nice work!
+
+[1] ClassDiagram.png
+[2] ObjectDiagram.png
+
+

@@ -1,0 +1,90 @@
+@startuml
+
+title __Expression Class Diagram__\n
+
+  namespace at.fhj.swd {
+    class at.fhj.swd.Add {
+        + Add(s1:Expression s2:Expression)
+        + evaluate():float
+    }
+  }
+  
+
+  namespace at.fhj.swd {
+    abstract class at.fhj.swd.BinaryOperation {
+        + BinaryOperation(op1:Expression, op2:Expression)
+        {abstract} + evaluate():float
+        + getOperands():List<Expression>
+        + getSecondOperand():Expression
+        + setSecondOperand(op2:Expression):void
+    }
+  }
+  
+
+  namespace at.fhj.swd {
+    interface at.fhj.swd.Expression {
+        {abstract} + evaluate():float
+    }
+  }
+  
+
+  namespace at.fhj.swd {
+    class at.fhj.swd.Invert {
+        + Invert(op:Expression)
+        + evaluate():float
+    }
+  }
+  
+
+  namespace at.fhj.swd {
+    class at.fhj.swd.Negate {
+        + Negate(op:Expression)
+        + evaluate():float
+        + isNegative():boolean
+        + isPositive():boolean
+    }
+  }
+  
+
+  namespace at.fhj.swd {
+    class at.fhj.swd.Number {
+        - value : float
+        + Number(value:float)
+        + Number(number:Number)
+        + evaluate():float
+        + getValue():float
+        + setValue(value:float):void
+    }
+  }
+  
+
+  namespace at.fhj.swd {
+    class at.fhj.swd.Subtract {
+        + Subtract(m1:Expression, m2:Expression)
+        + evaluate():float
+    }
+  }
+  
+
+  namespace at.fhj.swd {
+    abstract class at.fhj.swd.UnaryOperation {
+        + UnaryOperation(op:Expression)
+        {abstract} + evaluate():float
+        + getOperand():Expression
+        + setOperand(op:Expression):void
+    }
+  }
+  
+
+  at.fhj.swd.Add -up-|> at.fhj.swd.BinaryOperation
+  at.fhj.swd.BinaryOperation -up-|> at.fhj.swd.UnaryOperation
+  at.fhj.swd.BinaryOperation o-- at.fhj.swd.Expression : -operand2:Expression
+  at.fhj.swd.Invert -up-|> at.fhj.swd.UnaryOperation
+  at.fhj.swd.Negate -up-|> at.fhj.swd.UnaryOperation
+  at.fhj.swd.Number .up.|> at.fhj.swd.Expression
+  at.fhj.swd.Subtract -up-|> at.fhj.swd.BinaryOperation
+  at.fhj.swd.UnaryOperation .up.|> at.fhj.swd.Expression
+  at.fhj.swd.UnaryOperation o-- at.fhj.swd.Expression : -operand:Expression
+
+
+@enduml
